@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a href="#" id="saveBtn" v-on:click="save" />
+    <a href="#" v-on:click="save">save</a>
     <div class="add-form">
       <UserInput label="name" v-model="contact.name"></UserInput>
       <UserInput label="e-mail" mode="texthalf" v-model="contact.email"></UserInput>
@@ -14,6 +14,7 @@
 
  <script>
 import UserInput from "./UserInput";
+import firestore from "../db/firebase";
 
 export default {
   name: "AddContact",
@@ -38,6 +39,14 @@ export default {
     save(e) {
       e.preventDefault();
       alert("saved");
+      firestore.collection("contacts").add({
+        address: this.contact.address,
+        name: this.contact.name,
+        email: this.contact.email,
+        phone: this.contact.phone,
+        facebook: this.contact.fbHandle,
+        instagram: this.contact.instaHandle
+      });
       alert(this.contact.name + " " + this.contact.email);
       this.clearOut();
       this.$router.push("/");
