@@ -11,6 +11,7 @@
     "core-js": "^3.6.4",
     "eslint-loader": "^4.0.0",
     "firebase": "^7.14.0",
+    "ionic": "^5.4.16",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
     "vuefire": "^2.1.0",
