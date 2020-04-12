@@ -6,12 +6,14 @@
     <div>email: {{contact.email}}</div>
     <div>phone: {{contact.phone}}</div>
     <div>facebook: {{contact.facebook}}</div>
+    <div>Instagram: {{contact.instagram}}</div>
   </div>
 </template>
 
 
  <script>
 import firestore from "../db/firebase";
+
 export default {
   name: "contact-detail",
   data() {
