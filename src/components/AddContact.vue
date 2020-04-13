@@ -54,14 +54,6 @@
             <button class="icon instaico"></button>
             <input class="form-control" type="text" id="ig" v-model="contact.instaHandle" />
           </div>
-          <div class="social-div">
-            <button class="icon linkedinico"></button>
-            <input class="form-control" type="text" id="link" v-model="contact.linkedHandle" />
-          </div>
-          <div class="social-div">
-            <button class="icon twico"></button>
-            <input class="form-control" type="text" id="twi" v-model="contact.twitterHandle" />
-          </div>
         </div>
       </form>
     </div>

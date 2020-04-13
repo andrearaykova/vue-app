@@ -21,14 +21,6 @@
             <button class="icon instaico"></button>
             <span>{{contact.instagram}}</span>
           </div>
-          <div class="social-unit">
-            <button class="icon linkedinico"></button>
-            <span>{{contact.linkedin}}</span>
-          </div>
-          <div class="social-unit">
-            <button class="icon twico"></button>
-            <span>{{contact.twitter}}</span>
-          </div>
         </div>
       </div>
     </div>
@@ -108,9 +100,6 @@ export default {
 @media only screen and (max-width: 500px) {
   .social-details {
     margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
   }
   .details {
     justify-content: stretch;
