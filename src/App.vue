@@ -3,6 +3,9 @@
     <nav class="navbar-custom">
       <ul class="navbar-ul">
         <li v-if="!isLoggedIn">
+          <button @click="welcome">Home</button>
+        </li>
+        <li v-if="!isLoggedIn">
           <button @click="login">Log In</button>
         </li>
         <li v-if="!isLoggedIn">
@@ -37,13 +40,11 @@ export default {
     };
   },
   created() {
-    auth
-      .signInWithEmailAndPassword("testing@gmail.com", "testing")
-      .then(() => {
-        this.isLoggedIn = true;
-        this.currentUser = auth.currentUser.email;
-        this.$router.push("/");
-      });
+    auth.signInWithEmailAndPassword("testing@gmail.com", "testing").then(() => {
+      this.isLoggedIn = true;
+      this.currentUser = auth.currentUser.email;
+      this.$router.push("/welcome");
+    });
     if (auth.currentUser) {
       this.isLoggedIn = true;
       this.currentUser = auth.currentUser.email;
@@ -62,7 +63,10 @@ export default {
         this.currentUser = false;
         this.isLoggedIn = false;
       });
-    }
+    },
+     welcome() {
+      this.$router.push("/welcome");
+    },
   }
 };
 </script>

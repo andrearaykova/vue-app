@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+import Welcome from "./views/Welcome.vue";
 import AddContact from "./components/AddContact.vue";
 import ContactDetail from "./components/ContactDetail.vue";
 import UpdateContact from "./components/UpdateContact.vue";
@@ -14,6 +15,14 @@ let router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
+    {
+      path: "/welcome",
+      name: "welcome",
+      component: Welcome,
+      meta: {
+        requiresGuest: true
+      }
+    },
     {
       path: "/",
       name: "home",
