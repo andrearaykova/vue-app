@@ -70,7 +70,7 @@
 
 
 <script>
-import fireStore from "../db/index";
+import fireStore from "../../db/index";
 
 export default {
   name: "update",

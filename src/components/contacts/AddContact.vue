@@ -69,7 +69,8 @@
 </template>
 
 <script>
-import firestore from "../db/index";
+import firestore from "../../db/index";
+
 export default {
   name: "AddContact",
   data() {

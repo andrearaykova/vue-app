@@ -37,7 +37,8 @@
 
 
 <script>
-import firestore from "../db/index";
+import firestore from "../../db/index";
+
 export default {
   name: "contact-detail",
   data() {
@@ -101,7 +102,7 @@ export default {
   font-size: 15px;
 }
 .fbico {
-  background: url("../assets/facebook-icon.svg");
+  background: url("../../assets/facebook-icon.svg");
   background-size: 40px 40px;
 }
 @media only screen and (max-width: 500px) {

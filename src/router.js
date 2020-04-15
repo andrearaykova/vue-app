@@ -2,11 +2,11 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Welcome from "./views/Welcome.vue";
-import AddContact from "./components/AddContact.vue";
-import ContactDetail from "./components/ContactDetail.vue";
-import UpdateContact from "./components/UpdateContact.vue";
-import Login from "./components/Login.vue";
-import Register from "./components/Register.vue";
+import AddContact from "./components/contacts/AddContact.vue";
+import ContactDetail from "./components/contacts/ContactDetail.vue";
+import UpdateContact from "./components/contacts/UpdateContact.vue";
+import Login from "./components/auth/Login.vue";
+import Register from "./components/auth/Register.vue";
 import { auth } from "./db/index";
 
 Vue.use(Router);

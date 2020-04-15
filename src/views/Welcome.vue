@@ -1,4 +1,3 @@
-
 <template>
   <div class="welcome">
     <h3 class="text-center">

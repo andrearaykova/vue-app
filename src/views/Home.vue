@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import ContactListItem from "../components/ContactList";
+import ContactListItem from "../components/contacts/ContactList";
 import fireStore from "../db/index";
 
 export default {

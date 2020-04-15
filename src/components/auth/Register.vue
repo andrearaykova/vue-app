@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import firebase from "../db/index";
-import { auth } from "../db/index";
+import firebase from "../../db/index";
+import { auth } from "../../db/index";
 
 export default {
   name: "register",

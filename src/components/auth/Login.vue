@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { auth } from "../db/index";
+import { auth } from "../../db/index";
 
 export default {
   name: "login",
