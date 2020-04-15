@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div>
     <div class="container" id="list">
       <ContactListItem
@@ -13,9 +13,9 @@
   </div>
 </template>
 
- <script>
+<script>
 import ContactListItem from "../components/ContactList";
-import { firestore } from "../db/firebase";
+import fireStore from "../db/index";
 
 export default {
   name: "home",
@@ -31,7 +31,7 @@ export default {
     }
   },
   created() {
-    firestore.collection("contacts").onSnapshot(snap => {
+    fireStore.collection("contacts").onSnapshot(snap => {
       let temp = [];
       snap.forEach(doc => {
         temp.push({ id: doc.id, ...doc.data() });

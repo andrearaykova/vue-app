@@ -22,7 +22,7 @@
           <input
             placeholder="Email..."
             class="form-control"
-            type="text"
+            type="email"
             id="mail"
             v-model="contact.email"
           />
@@ -31,7 +31,7 @@
           <input
             placeholder="Phone..."
             class="form-control"
-            type="text"
+            type="number"
             id="phone"
             v-model="contact.phone"
           />
@@ -54,15 +54,22 @@
             <button class="icon instaico"></button>
             <input class="form-control" type="text" id="ig" v-model="contact.instaHandle" />
           </div>
+          <div class="social-div">
+            <button class="icon linkedinico"></button>
+            <input class="form-control" type="text" id="link" v-model="contact.linkedHandle" />
+          </div>
+          <div class="social-div">
+            <button class="icon twico"></button>
+            <input class="form-control" type="text" id="twi" v-model="contact.twitterHandle" />
+          </div>
         </div>
       </form>
     </div>
   </div>
 </template>
 
- <script>
-import firestore from "../db/firebase";
-
+<script>
+import firestore from "../db/index";
 export default {
   name: "AddContact",
   data() {
@@ -73,7 +80,9 @@ export default {
         phone: "",
         address: "",
         fbHandle: "",
-        instaHandle: ""
+        twitterHandle: "",
+        instaHandle: "",
+        linkedHandle: ""
       }
     };
   },
@@ -92,9 +101,10 @@ export default {
         email: this.contact.email,
         phone: this.contact.phone,
         facebook: this.contact.fbHandle,
-        instagram: this.contact.instaHandle
+        linkedin: this.contact.linkedHandle,
+        instagram: this.contact.instaHandle,
+        twitter: this.contact.twitterHandle
       });
-      alert(this.contact.name + " " + this.contact.email);
       this.clearOut();
       this.$router.push("/");
     },
@@ -103,8 +113,7 @@ export default {
     }
   }
 };
-</script> 
-
+</script>
 <style>
 .container-add {
   max-width: 80vw;
@@ -127,6 +136,7 @@ export default {
   margin: 10px 10px;
   display: flex;
 }
+
 .form-div input {
   border-left: none;
   border-right: none;

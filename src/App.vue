@@ -24,8 +24,9 @@
     </div>
   </div>
 </template>
+
 <script>
-import { auth } from "./db/firebase";
+import { auth } from "./db/index";
 
 export default {
   name: "app",
@@ -38,7 +39,7 @@ export default {
   created() {
     auth
       .signInWithEmailAndPassword("testing@gmail.com", "testing")
-      .then(user => {
+      .then(() => {
         this.isLoggedIn = true;
         this.currentUser = auth.currentUser.email;
         this.$router.push("/");
@@ -66,6 +67,7 @@ export default {
 };
 </script>
 
+
 <style>
 @import url("./css/main.css");
-</style> 
+</style>

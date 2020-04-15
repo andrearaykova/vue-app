@@ -21,6 +21,14 @@
             <button class="icon instaico"></button>
             <span>{{contact.instagram}}</span>
           </div>
+          <div class="social-unit">
+            <button class="icon linkedinico"></button>
+            <span>{{contact.linkedin}}</span>
+          </div>
+          <div class="social-unit">
+            <button class="icon twico"></button>
+            <span>{{contact.twitter}}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -28,9 +36,8 @@
 </template>
 
 
- <script>
-import firestore from "../db/firebase";
-
+<script>
+import firestore from "../db/index";
 export default {
   name: "contact-detail",
   data() {
@@ -49,7 +56,7 @@ export default {
 };
 </script>
 
- <style>
+<style>
 .container-detail {
   width: 75vw;
   margin: auto;
@@ -109,4 +116,4 @@ export default {
     letter-spacing: 1px;
   }
 }
-</style> 
+</style>

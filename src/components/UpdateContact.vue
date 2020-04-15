@@ -22,7 +22,7 @@
           <input
             placeholder="Email..."
             class="form-control"
-            type="text"
+            type="email"
             id="mail"
             v-model="contact.email"
           />
@@ -31,7 +31,7 @@
           <input
             placeholder="Phone..."
             class="form-control"
-            type="text"
+            type="number"
             id="phone"
             v-model="contact.phone"
           />
@@ -69,8 +69,8 @@
 </template>
 
 
- <script>
-import fireStore from "../db/firebase";
+<script>
+import fireStore from "../db/index";
 
 export default {
   name: "update",
@@ -110,4 +110,4 @@ export default {
       });
   }
 };
-</script> 
+</script>

@@ -19,8 +19,8 @@
   </div>
 </template>
 
- <script>
-import fireStore from "../db/firebase";
+<script>
+import fireStore from "../db/index";
 
 export default {
   name: "contact-list-item",

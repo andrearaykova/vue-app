@@ -3,8 +3,8 @@
     <div class="container-login">
       <form class="login-form">
         <h2>Register</h2>
-        <input type="text" v-model="email" class="form-control" placeholder="Email.." />
-        <input type="text" v-model="password" class="form-control" placeholder="Password.." />
+        <input type="email" v-model="email" class="form-control" placeholder="Email.." />
+        <input type="password" v-model="password" class="form-control" placeholder="Password.." />
         <button @click="register" class="btn btn-primary">Register</button>
       </form>
       <h4 class="error-m" v-if="error">{{error}}</h4>
@@ -12,9 +12,9 @@
   </div>
 </template>
 
- <script>
-// import firebase from "../db/firebase";
-import { auth } from "../db/firebase";
+<script>
+import firebase from "../db/index";
+import { auth } from "../db/index";
 
 export default {
   name: "register",
@@ -31,7 +31,7 @@ export default {
       auth
         .createUserWithEmailAndPassword(this.email, this.password)
         .then(user => {
-         this.$router.push("/login");
+          this.$router.push("/");
         })
         .catch(e => {
           this.error = e;
@@ -41,7 +41,7 @@ export default {
 };
 </script>
 
- <style>
+<style>
 .container-login {
   width: 400px;
   padding: 40px;
@@ -78,4 +78,4 @@ export default {
     width: 300px;
   }
 }
-</style> 
+</style>

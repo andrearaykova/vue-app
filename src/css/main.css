@@ -135,10 +135,6 @@ body {
   content: "No Records Found...";
 }
 
-/* Add Contact */
-/* 
-.add-form {} */
-
 /* ContactListItem */
 
 .contact-list-item {
@@ -358,9 +354,18 @@ body {
   background-size: 40px 40px;
 }
 
+.twico {
+  background: url("../assets/twitter-icon.svg");
+  background-size: 40px 40px;
+}
+
 .instaico {
   background: url("../assets/instagram-icon.svg");
   background-size: 40px 40px;
+}
+
+.linkedinico {
+  background: url("../assets/linkedin-icon.svg");
 }
 
 .icon {
